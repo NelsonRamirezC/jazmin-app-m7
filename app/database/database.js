@@ -12,11 +12,18 @@ host = process.env.DB_HOST;
 const sequelize = new Sequelize(database, user, password, {
     host: host,
     dialect: "postgres",
+    port: process.env.DB_PORT,
     pool: {
         max: 5,
         min: 0,
         acquire: 10000,
         idle: 2000,
+    },
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
+        },
     },
 });
 

@@ -10,9 +10,8 @@ const main = async () => {
         await sequelize.sync({ force: false, alter: true });
         let PORT = process.env.PORT || 3000;
         app.listen(PORT, () =>
-            console.log("Servidor escuchando en puerto: "+ PORT)
+            console.log("Servidor escuchando en puerto: " + PORT)
         );
-
     } catch (error) {
         console.log("Ha ocurrido un error: ", error);
     }
