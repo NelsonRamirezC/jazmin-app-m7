@@ -27,6 +27,6 @@
     "nodemon": "^2.0.22"
   },
   "engines": {
-    "node": "lts"
+    "node": ">=18.x"
   }
 }
