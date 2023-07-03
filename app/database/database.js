@@ -12,6 +12,12 @@ host = process.env.DB_HOST;
 const sequelize = new Sequelize(database, user, password, {
     host: host,
     dialect: "postgres",
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 10000,
+        idle: 2000,
+    },
 });
 
 export default sequelize;
