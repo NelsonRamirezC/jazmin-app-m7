@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
@@ -27,6 +26,6 @@
     "nodemon": "^2.0.22"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=18 < 19"
   }
 }
