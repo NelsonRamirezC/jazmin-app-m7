@@ -37,7 +37,7 @@ app.use(
 );
 
 // Publish the 'public' folder
-app.use("/public", express.static("public"));
+app.use("/public", express.static(__dirname+ "/../public"));
 
 // ROUTES
 app.use("/api/", router);
